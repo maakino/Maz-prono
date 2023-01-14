@@ -1,16 +1,30 @@
 <?php
 
 get_header();
+?>
 
+<?php
 /* Start the Loop */
 while (have_posts()) :
     the_post();
-    get_template_part('template-parts/content/content-page');
+?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    // If comments are open or there is at least one comment, load up the comment template.
-    if (comments_open() || get_comments_number()) {
-        comments_template();
-    }
+
+        <h1><?= the_title()  ?> </h1>
+
+
+        <div>
+            <?php the_content() ?>
+        </div>
+
+    </article><!-- #post-<?php the_ID(); ?> -->
+<?php
+
 endwhile; // End of the loop.
+?>
 
+<?php
 get_footer();
+
+?>
