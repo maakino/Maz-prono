@@ -14,23 +14,27 @@
     <header>
 
         <nav>
-            <?php
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <?php
 
-            $customMenu = wp_nav_menu([
-                'theme_location' => "header-menu",
-                'menu' => 0,
-                'container' => 'ul',
-                'fallback_cb' => false,
-            ]);
+                $customMenu = wp_nav_menu([
+                    'theme_location' => "header-menu",
+                    'menu' => 0,
+                    'container' => 'ul',
+                    'fallback_cb' => false,
+                ]);
 
-            /* get li in menu */
-            $li = explode('</li>', $customMenu);
-            /* echo li */
-            foreach ($li as $value) {
-                echo $value . '</li>';
-            }
+                /* get li in menu */
+                $li = explode('</li>', $customMenu);
+                /* echo li */
+                foreach ($li as $value) {
+                    echo $value . '</li>';
+                }
 
-            ?>
+                ?>
+            </ul>
+
         </nav>
 
     </header>

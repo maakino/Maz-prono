@@ -8,6 +8,7 @@ get_header();
 
 
 <!-- YOUR CODE HTML  -->
+<h1>Home</h1>
 
 
 <?php
