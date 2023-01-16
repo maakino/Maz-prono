@@ -40,6 +40,53 @@ get_header();
         </div>
     </section>
 
+    <section class="pricing">
+        <div class="max-w paddingSection pricingContent">
+            <span class="titleSubs">
+                <h2 class="title title-medium"> Nos offres</h2>
+                <p class="txt">Voici les dernières offres que nous proposons </p>
+            </span>
+            <div class="pricingGallery">
+                <div class="card">
+                    <h2 class="title title-medium">VIP</h2>
+                    <h2 class="title title-medium">1 mois</h2>
+                    <p>ACCÈS VIP</p>
+                    <p>PRONO DU JOUR</p>
+                    <p>COMBINÉ</p>
+                    <p>COMBINÉ BONUS</p>
+                    <p>COMBINÉ BUTTEURS</p>
+                    <p>Montante</p>
+                    <h3 class="title title-medium">25.00€</h3>
+                    <a href="#" class="btn btn-primary">S'abonner</a>
+                </div>
+                <div class="card">
+                    <h2 class="title title-medium">VIP</h2>
+                    <h2 class="title title-medium">2 mois</h2>
+                    <p>ACCÈS VIP</p>
+                    <p>PRONO DU JOUR</p>
+                    <p>COMBINÉ</p>
+                    <p>COMBINÉ BONUS</p>
+                    <p>COMBINÉ BUTTEURS</p>
+                    <p>Montante</p>
+                    <h3 class="title title-medium">25.00€</h3>
+                    <a href="#" class="btn btn-primary">S'abonner</a>
+                </div>
+                <div class="card">
+                    <h2 class="title title-medium">VIP</h2>
+                    <h2 class="title title-medium">3 mois</h2>
+                    <p>ACCÈS VIP</p>
+                    <p>PRONO DU JOUR</p>
+                    <p>COMBINÉ</p>
+                    <p>COMBINÉ BONUS</p>
+                    <p>COMBINÉ BUTTEURS</p>
+                    <p>Montante</p>
+                    <h3 class="title title-medium">25.00€</h3>
+                    <a href="#" class="btn btn-primary">S'abonner</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </Main>
 
 

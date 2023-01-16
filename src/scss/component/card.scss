@@ -1,0 +1,27 @@
+.card{
+    background-color: var(--bkg-tertiary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    box-shadow: var(--box--shadow);
+    min-width: 32.0rem;
+    max-width: 34.6rem;
+    min-height: 46.6rem;
+    border-radius: var(--border-primary-radius);
+    padding: 2.3rem 0;
+    @include media(small){
+    width: 38.6rem;
+    }
+    h2, h3{
+        color: var(--links-secondary-color);
+        font-size: 3.2rem;
+    }
+    p{
+        margin: 0;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}

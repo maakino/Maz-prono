@@ -1,0 +1,16 @@
+.pricing{
+    background-color: var(--bkg-primary-color);
+    &Gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3.2rem;
+        @include media (medium){
+            flex-direction: row;
+        }
+        @include media (large){
+         gap: 11.1rem;
+        }
+    }
+}
