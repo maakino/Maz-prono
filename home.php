@@ -21,14 +21,22 @@ get_header();
     <section class="lastGain">
         <div class="max-w paddingSection lastGainContent">
             <span class="titleSubs">
-            <h2 class="title title-medium"> Nos derniers gain</h2>
-            <p class="txt">Voici mes derniers pronostiques </p>
+                <h2 class="title title-medium"> Nos derniers gain</h2>
+                <p class="txt">Voici mes derniers pronostiques </p>
             </span>
             <div class="lastGain__gallery">
                 <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
                 <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
                 <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
             </div>
+        </div>
+    </section>
+
+    <section class="promoCode">
+        <div class="max-w">
+            <h2 class="title title-medium">
+                Bénéficier de 20% de remise avec le code Cow974
+            </h2>
         </div>
     </section>
 
