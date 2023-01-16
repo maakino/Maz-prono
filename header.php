@@ -48,7 +48,7 @@
                         ?>
                     </ul>
                 </nav>
-                <button href="#" class="btn btn-secondary" title="Button pour allez sur la page profil">Mon profil</button>
+                <button href="#" class="btn btn-primary" title="Button pour allez sur la page profil">Mon profil</button>
             </div>
         </div>
 

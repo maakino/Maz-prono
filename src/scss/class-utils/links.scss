@@ -1,0 +1,7 @@
+.links{
+    transition: all 0.3s;
+    &:hover{
+        color: var(--links-primary-color);
+        transition: all 0.3s;
+    }
+}
