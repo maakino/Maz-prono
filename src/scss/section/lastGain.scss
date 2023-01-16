@@ -1,0 +1,18 @@
+.lastGain{
+    background-color: var(--bkg-primary-color);
+    &Content, &__gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.9rem;
+    }
+    &__gallery{
+        @include media (medium){
+            flex-direction: row;
+        }
+        @include media (large){
+            gap: 11.1rem;
+        }
+    }
+}
