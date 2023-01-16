@@ -1,0 +1,25 @@
+.home{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/bkg/bkgImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    &Content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.9rem;
+        height: 100%;
+        p{
+            text-align: center;
+            @include media(small){
+                max-width: 90%;
+            }
+            @include media(large){
+                max-width: 70%;
+            }
+        }
+    }
+}

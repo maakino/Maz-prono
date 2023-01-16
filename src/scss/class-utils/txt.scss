@@ -1,0 +1,9 @@
+.txt{
+    font-family: "Montserrat";
+    font-weight: 400;
+    color: var(--txt-primary-color);
+    font-size: 2rem;
+    @include media (small){
+        font-size: 2.4rem;
+    }
+}

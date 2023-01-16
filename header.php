@@ -22,7 +22,7 @@
 
             <div class="header__content">
                 <a href="#accueil">
-                    <img src="<?= get_template_directory_uri() . "/assets/img/logo.jpg" ?>" alt="Logo Maz prono" width="126" height="69" loading="lazy">
+                    <img src="<?= get_template_directory_uri() . "/assets/img/logo.png" ?>" alt="Logo Maz prono" width="60" height="60" loading="lazy">
                 </a>
 
                 <nav class="headernNav">
