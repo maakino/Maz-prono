@@ -2,7 +2,7 @@
     <div class="max-w paddingHeader">
         <div class="footerContent">
             <a href="#accueil">
-                <img src="<?= get_template_directory_uri() . "/assets/img/logo.jpg" ?>" alt="Logo Maz prono qui renvoie en haut de la page d'accueil" width="126" height="69" loading="lazy">
+                <img src="<?= get_template_directory_uri() . "/assets/img/logo.png" ?>" alt="Logo Maz prono qui renvoie en haut de la page d'accueil" width="129" height="129" loading="lazy">
             </a>
             <div class="footerContent__block">
                 <h2 class="footer__title">Liens rapide</h2>
