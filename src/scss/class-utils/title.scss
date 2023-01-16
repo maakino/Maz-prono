@@ -1,12 +1,18 @@
-.big-title{
-    font-size: 3.6rem;
-    font-weight: 900;
-    font-family: "Poppins";
-    color: var(--txt-primary-color);
-    @include media (small){
-        font-size: 5.6rem;
-    }
-    @include media (large){
-        font-size: 9.6rem;
-    }
+.title {
+  font-family: "Poppins";
+  color: var(--txt-primary-color);
+}
+.title-big {
+  font-weight: 900;
+  font-size: 3.6rem;
+  @include media(small) {
+    font-size: 5.6rem;
+  }
+  @include media(large) {
+    font-size: 9.6rem;
+  }
+}
+.title-medium {
+  font-size: 2.9rem;
+  font-weight: bold;
 }
