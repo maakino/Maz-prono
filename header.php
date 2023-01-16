@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,38 +10,46 @@
     </script>
     <?= wp_head() ?>
     <title><?= get_bloginfo('name') ?></title>
-
 </head>
 
 <body>
 
     <header class="header">
         <div class="max-w paddingHeader">
-            <img src="<?= get_template_directory_uri() . "/assets/img/logo.jpg" ?>" alt="Logo Maz prono" width="126" height="69" loading="lazy">
-            <nav class="nav">
-                <ul class="nav__block">
-                    <li class="nav__items"><a href="#">Accueil</a></li>
-                    <li class="nav__items"><a href="#">Contact</a></li>
-                    <?php
+            <div class="header__burgerIcon">
+                <img id="burger" src="<?= get_template_directory_uri() . "/assets/img/iconBurger.svg" ?>" alt="Icone pour ouvrir le menue" width="45" height="45" loading="lazy">
+            </div>
 
-                    $customMenu = wp_nav_menu([
-                        'theme_location' => "header-menu",
-                        'menu' => 0,
-                        'container' => 'ul',
-                        'fallback_cb' => false,
-                    ]);
+            <div class="header__content">
+                <a href="#accueil">
+                    <img src="<?= get_template_directory_uri() . "/assets/img/logo.jpg" ?>" alt="Logo Maz prono" width="126" height="69" loading="lazy">
+                </a>
 
-                    /* get li in menu */
-                    $li = explode('</li>', $customMenu);
-                    /* echo li */
-                    foreach ($li as $value) {
-                        echo $value . '</li>';
-                    }
+                <nav class="headernNav">
+                    <ul class="headerNav__block">
+                        <li class="headerNav__items"><a href="#">Accueil</a></li>
+                        <li class="headerNav__items"><a href="#">Contact</a></li>
+                        <?php
 
-                    ?>
-                </ul>
+                        $customMenu = wp_nav_menu([
+                            'theme_location' => "header-menu",
+                            'menu' => 0,
+                            'container' => 'ul',
+                            'fallback_cb' => false,
+                        ]);
 
-            </nav>
+                        /* get li in menu */
+                        $li = explode('</li>', $customMenu);
+                        /* echo li */
+                        foreach ($li as $value) {
+                            echo $value . '</li>';
+                        }
+
+                        ?>
+                    </ul>
+                </nav>
+                <a href="#" title="Button pour allez sur la page profil">Mon profil</a>
+            </div>
         </div>
 
     </header>

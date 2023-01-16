@@ -1,9 +1,16 @@
 .paddingSection{
+    @include media (medium){
+        padding: 2.2rem 5rem;
+    }
     @include media (large){
-        padding: 5rem 22.7rem;
+           padding: 5rem 22.7rem;
     }
 }
 .paddingHeader{
+    padding: 2rem 1.1rem;
+    @include media (medium){
+        padding: 2.2rem 5rem;
+    }
     @include media (large){
         padding: 2.2rem 22.7rem;
     }

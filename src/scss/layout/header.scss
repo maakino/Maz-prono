@@ -1,3 +1,59 @@
-.header{
-background-color: red;
+.header {
+  background-color: var(--bkg-tertiary-color);
+  box-shadow: var(--box--shadow);
+  &__burgerIcon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      filter: invert(0%) sepia(1%) saturate(7430%) hue-rotate(5deg)
+        brightness(2%) contrast(90%);
+    }
+    @include media(medium) {
+      display: none;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.212);
+    margin-top: 1.1rem;
+    padding: 5rem 0;
+    gap: 1.5rem;
+    @include media(medium) {
+      padding: 0;
+      border: none;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &Nav {
+    display: flex;
+    flex-direction: column;
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      @include media(medium) {
+        flex-direction: row;
+        gap: 3.2rem;
+      }
+    }
+  }
+  a {
+    font-size: 2rem;
+    font-family: "Poppins";
+    font-weight: 700;
+    color: var(--links-secondary-color);
+    transition: all 0.1s;
+
+    &:hover {
+      color: var(--links-bkg-txt-color);
+      transition: all 0.1s;
+    }
+  }
 }
+/* .headerMobileOpen{
+  display: flex;
+} */
