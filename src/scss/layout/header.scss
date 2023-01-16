@@ -1,6 +1,11 @@
 .header {
   background-color: var(--bkg-tertiary-color);
   box-shadow: var(--box--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   &__burgerIcon {
     width: 100%;
     display: flex;
@@ -22,6 +27,7 @@
     padding: 5rem 0;
     gap: 1.5rem;
     @include media(medium) {
+      margin: 0;
       display: flex;
       padding: 0;
       border: none;
@@ -45,7 +51,7 @@
   a {
     font-size: 2rem;
     font-family: "Poppins";
-    font-weight: 700;
+    font-weight: 600;
     color: var(--links-secondary-color);
     transition: all 0.3s;
 
