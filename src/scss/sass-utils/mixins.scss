@@ -5,6 +5,9 @@
 */
 
 $breakpoints:(
+    'smallXs':(
+        max-width: 320px
+    ),
     'small':(
         min-width: 576px
     ),

@@ -1,16 +1,19 @@
-.pricing{
-    background-color: var(--bkg-primary-color);
-    &Gallery{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3.2rem;
-        @include media (medium){
-            flex-direction: row;
-        }
-        @include media (large){
-         gap: 11.1rem;
-        }
+.pricing {
+  background-color: var(--bkg-primary-color);
+  &Gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.6rem;
+    @include media(small) {
     }
+    @include media(medium) {
+      flex-direction: row;
+    }
+    @include media(large) {
+        gap: 5rem;
+    }
+  }
 }
