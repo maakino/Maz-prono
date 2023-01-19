@@ -1,0 +1,163 @@
+.paiement_info {
+  font-family: "Montserrat";
+  font-size: 2.4rem;
+  color: var(--txt-primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  line-height: 2;
+  text-align: center;
+  .pmpro_checkout-h3-msg {
+    text-align: center !important;
+    display: block;
+    a {
+      color: var(--bkg-tertiary-color) !important;
+      font-family: "Poppins" !important;
+      font-weight: 500 !important;
+      text-decoration: underline;
+      &:hover{
+        color: var(--links-bkg-txt-color) !important;
+      }
+    }
+  }
+  #other_discount_code_a {
+    color: var(--txt-primary-color);
+    text-decoration: underline;
+    width: 100%;
+  }
+  &-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+
+    button {
+      &:hover {
+        background-color: var(--links-bkg-txt-color);
+      }
+    }
+  }
+}
+.pmpro_checkout-h3-name {
+  display: none !important;
+}
+.adresse_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &Input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+    @include media(large) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+#bcountry {
+  @include media(smallXs) {
+    min-width: 31rem;
+  }
+  min-width: 34.6rem;
+  padding: 1.2rem 0;
+  background-color: var(--bkg-tertiary-color);
+  color: var(--links-secondary-color);
+  box-shadow: var(--box--shadow);
+  border: none;
+  display: inline-block !important;
+  border-radius: var(--border-primary-radius);
+  font-size: 1.8rem;
+  font-family: "Montserrat";
+  @include media(small) {
+    min-width: 46.4rem;
+  }
+  &:focus {
+    outline-color: var(--links-bkg-txt-color);
+  }
+}
+
+.pmpro_checkout-field-bconfirmemail,
+.pmpro_checkout-field-bcountry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content !important;
+  @include media(medium) {
+    align-items: flex-start;
+  }
+}
+.pmpro_checkout-field-bcountry {
+  @include media(smallXs) {
+    width: 31rem;
+  }
+}
+
+#paiement_block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    display: none;
+  }
+  iframe {
+    background-color: var(--bkg-tertiary-color);
+    color: var(--links-secondary-color);
+    border: none;
+    display: inline-block !important;
+    font-size: 1.8rem;
+    font-family: "Montserrat";
+    padding-top: 55px !important;
+  }
+  .StripeElement {
+    @include media(smallXs) {
+      max-width: 31rem;
+    }
+    box-shadow: var(--box--shadow);
+    border-radius: var(--border-primary-radius);
+    width: 34.6rem;
+    height: 4.8rem !important;
+    padding: 15px;
+    background-color: white !important;
+    @include media(small) {
+      width: 46.4rem;
+    }
+  }
+  .pmpro_payment-discount-code {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    font-family: "Montserrat";
+    input {
+      text-decoration: none;
+      font-size: 2rem;
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        font-size: 2rem;
+      }
+    }
+  }
+  .pmpro_submit {
+    flex-direction: column !important;
+  }
+}
+
+#paiement_block, #info_block, #adresse_block{
+animation: showPage 2s ;
+}
+@keyframes showPage {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,73 @@
+.pmpro_invoice_wrap {
+  font-size: 2.4rem;
+  color: var(--bkg-tertiary-color);
+  overflow-x: scroll;
+height: auto;
+font-family: "Montserrat";
+  max-width: 100vw;
+  @include media(medium) {
+    overflow-x: initial;
+    padding: 0;
+  }
+  table {
+    max-height: 500px;
+    min-width: 500px;
+    margin-top: 1.4rem;
+    thead {
+      font-family: "Poppins";
+      font-weight: 600;
+    }
+    tbody {
+      margin-bottom: 1px solid var(--bkg-tertiary-color);
+      a {
+        text-decoration: underline;
+        color: var(--bkg-tertiary-color);
+        &:hover {
+          color: var(--links-bkg-txt-color);
+        }
+      }
+      tr {
+      }
+      td {
+        min-width: 200px;
+        text-align: center;
+        font-family: "Montserrat";
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+.pmpro_actions_nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    @include media(medium){
+        position: initial;
+    }
+    &-right {
+        margin-top: 1.4rem;
+        float: none;
+        width: initial;
+        text-align: center;
+
+        a {
+          box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+          padding: 14px 23px;
+          min-width: 13.2rem;
+          cursor: pointer;
+          font-family: "Montserrat";
+          font-weight: 800;
+          font-size: 1.6rem;
+          border-radius: var(--border-primary-radius);
+          transition: all 0.6s;
+          background-color: var(--links-primary-color);
+          color: var(--links-secondary-color) !important;
+          border: none;
+          &:hover {
+            background-color: var(--links-secondary-color);
+            color: var(--links-primary-color) !important;
+            transition: all 0.6s;
+          }
+        }
+      }
+}

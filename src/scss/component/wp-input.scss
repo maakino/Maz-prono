@@ -1,0 +1,113 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.2rem;
+  @include media(medium) {
+    width: 46.4rem;
+    margin: auto;
+  }
+  input {
+    @include media(smallXs) {
+      width: 31.0rem;
+    }
+    width: 100% !important;
+    max-width: none !important;
+    width: 34.6rem;
+    padding: 1.2rem 0;
+    background-color: var(--bkg-tertiary-color);
+    color: var(--links-secondary-color);
+    box-shadow: var(--box--shadow);
+    border: none;
+    display: inline-block !important;
+    border-radius: var(--border-primary-radius);
+    padding: 1.3rem 1.2rem;
+    font-size: 1.8rem;
+    font-family: "Montserrat";
+    @include media(small) {
+      min-width: 46.4rem;
+    }
+    &:focus {
+      outline-color: var(--links-bkg-txt-color);
+    }
+  }
+  label {
+    font-family: "Poppins";
+    font-weight: 500 !important;
+    font-size: 1.8rem;
+    color: var(--bkg-tertiary-color);
+    margin-bottom: 0.3rem !important;
+  }
+  .login-remember {
+    label {
+      display: flex !important;
+      flex-direction: row !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      gap: 1.4rem;
+      input {
+        min-width: inherit !important;
+        font-size: 5rem !important;
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+    }
+  }
+  input[type="submit"] {
+    box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
+    padding: 14px 23px;
+    min-width: 13.2rem;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 1.6rem;
+    border-radius: var(--border-primary-radius);
+    transition: all 0.6s;
+    background-color: var(--links-primary-color);
+    color: var(--links-secondary-color);
+    border: none;
+    &:hover {
+      background-color: var(--links-secondary-color);
+      color: var(--links-primary-color);
+      transition: all 0.6s;
+    }
+  }
+  input[type="button"] {
+    color: var(--bkg-tertiary-color) !important;
+    min-width: inherit;
+    &:hover {
+      color: var(--links-bkg-txt-color) !important;
+    }
+  }
+  .pmpro_submit {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1.4rem !important;
+  }
+}
+.pmpro_actions_nav {
+  a {
+    color: var(--bkg-tertiary-color);
+    font-family: "Montserrat";
+    font-size: 1.6rem;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--links-bkg-txt-color);
+      transition: all 0.2s;
+    }
+  }
+}
+.lite {
+  color: var(--bkg-tertiary-color) !important;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+}
+
+hr {
+  display: none;
+}

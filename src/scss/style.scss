@@ -8,16 +8,34 @@
 //layout
 @import 'layout/header';
 @import 'layout/footer';
+
 //page
 @import 'page/page';
+
 //section
 @import 'section/home';
 @import 'section/lastGain';
 @import 'section/promoCode';
 @import 'section/pricing';
+@import 'section/testimonial';
+@import 'section/wp-login';
+@import 'section/wp-article';
+@import 'section/wp-confirm';
+@import 'section/wp-cancel';
+@import 'section/wp-listFacture';
+@import 'section/wp-facture';
+@import 'section/wp-paiementInfo';
+
 //component
 @import 'component/btn';
 @import 'component/card';
+@import 'component/realTestimonial';
+@import 'component/main';
+@import 'component/wp-input';
+@import 'component/wp-error';
+@import 'component/wp-profil';
+@import 'component/wp-accontVip';
+
 //classUtils
 @import 'class-utils/max-w';
 @import 'class-utils/padding';

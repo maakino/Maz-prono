@@ -87,6 +87,12 @@ get_header();
         </div>
     </section>
 
+    <section class="testimonial">
+        <div class="maw-w paddingSection testimonialContent">
+        <?php echo do_shortcode('[sp_testimonial id="39"]');?>
+        </div>
+    </section>
+
 </Main>
 
 

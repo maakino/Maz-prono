@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript">
         const wp_curentUrl = '<?= home_url($wp->request); ?>';
+        const wp_siteUrl = '<?= get_template_directory_uri() ?>'
     </script>
     <?= wp_head() ?>
     <title><?= get_bloginfo('name') ?></title>
@@ -48,7 +49,11 @@
                         ?>
                     </ul>
                 </nav>
-                <button href="#" class="btn btn-primary" title="Button pour allez sur la page profil">Mon profil</button>
+                <div class="header__btn">
+                    <a href="<?= get_site_url().'/wp-admin' ?>" class="btn btn-primary" title="Button pour allez sur la page profil">Se connecter</a>
+                    <a href="<?= get_site_url().'/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary" title="Button pour allez sur la page profil">S'abonner</a>
+                </div>
+
             </div>
         </div>
 

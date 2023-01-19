@@ -1,0 +1,52 @@
+.pmpro_invoice_wrap {
+    margin: auto;
+  h3 {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  ul,
+  .pmpro_invoice_details {
+
+    margin: auto;
+    margin-top: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    justify-content: center;
+    @include media(large){
+        width: 50%;
+        }
+    li {
+      border-bottom: 1px solid var(--bkg-tertiary-color);
+    padding: 1rem;
+
+  }
+  .pmpro_invoice-payment-method {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    @include media (medium){
+        flex-direction: row;
+    }
+    strong {
+      content: " ";
+    }
+    strong:after {
+      content: " | ";
+    }
+    p {
+      br {
+        content: " ";
+      }
+      br:after {
+        content: " | ";
+      }
+    }
+  }
+}
+}
+.pmpro_a-print{
+  font-size: 2.4rem;
+  color: var(--bkg-tertiary-color);
+  
+}

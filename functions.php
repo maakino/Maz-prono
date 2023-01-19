@@ -37,4 +37,8 @@ add_action('wp_enqueue_scripts', function () {
     /* Scripts */
     wp_register_script('appJs',  get_template_directory_uri() . '/assets/js/script.js', [], false, true);
     wp_enqueue_script('appJs');
+    wp_register_script('capture_subscription',  get_template_directory_uri() . '/assets/js/captureSubscription.js', [], false, true);
+    wp_enqueue_script('capture_subscription');
+    wp_register_script('testimonial',  get_template_directory_uri() . '/assets/js/testimonial.js', [], false, true);
+    wp_enqueue_script('testimonial');
 });

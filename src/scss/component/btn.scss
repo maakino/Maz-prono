@@ -27,7 +27,7 @@
     color: var(--links-primary-color);
     background-color: transparent;
     &:hover{
-        border: none;
+       border-color: transparent;
         background-color: var(--links-bkg-txt-color);
         color: var(--links-secondary-color);
     }

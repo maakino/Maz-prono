@@ -1,0 +1,26 @@
+.pmpro_cancel_wrap {
+  color: var(--txt-primary-color);
+  font-family: "Montserrat" !important;
+  font-size: 2.4rem !important;
+  h2 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 2.9rem;
+  }
+  a{
+    color: red !important;
+    &:hover{
+        color: var(--links-bkg-txt-color) !important;
+      }
+  }
+  .pmpro_actions_nav {
+    a {
+    color: var(--txt-primary-color) !important;
+      font-size: 2.4rem;
+      text-decoration: underline;
+      &:hover{
+        color: var(--links-bkg-txt-color) !important;
+      }
+    }
+  }
+}
