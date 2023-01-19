@@ -8,16 +8,16 @@
                 <h2 class="footer__title">Liens rapide</h2>
                 <ul>
                     <li>
-                        <a class="footer__links links" href="#">Accueil</a>
+                        <a class="footer__links links" href="<?= home_url() ?>">Accueil</a>
                     </li>
                     <li>
-                        <a class="footer__links links" href="#">Nos offres</a>
+                        <a class="footer__links links" href="#pricing">Nos offres</a>
                     </li>
                     <li>
                         <a class="footer__links links" href="#">VIP</a>
                     </li>
                     <li>
-                        <a class="footer__links links" href="#">Contact</a>
+                        <a class="footer__links links" href="<?= home_url().'/contact' ?>">Contact</a>
                     </li>
                     <li>
                         <a class="footer__links links" href="#">Mentions légales</a>

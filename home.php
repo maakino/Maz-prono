@@ -14,7 +14,7 @@ get_header();
         <div class="max-w homeContent paddingSection">
             <h1 class="title title-big">MAZ PRONOS</h1>
             <p class="txt">Lorem ipsum dolor sit amet consectetur. Sollicitudin malesuada libero non pellentesque convallis arcu non.</p>
-            <a href="#" class="btn btn-primary">Voir les offres</a>
+            <a href="#pricing" class="btn btn-primary">Voir les offres</a>
         </div>
     </section>
 
