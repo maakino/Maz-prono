@@ -1,0 +1,47 @@
+.contact {
+  max-width: 100vw;
+  &Content {
+    display: flex;
+    flex-direction: column;
+    @include media(medium) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
+    @include media(large) {
+      gap: 30.7rem;
+    }
+  }
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include media(small) {
+      width: 80%;
+      margin: auto;
+    }
+    @include media(medium) {
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      width: 50.8rem;
+      margin: 0;
+    }
+  }
+  &Social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.9rem;
+    img {
+      width: 6rem;
+      height: auto;
+    }
+  }
+  textarea {
+    height: 150px;
+  }
+}

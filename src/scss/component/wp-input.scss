@@ -8,7 +8,7 @@ form {
     width: 46.4rem;
     margin: auto;
   }
-  input {
+  input, .wpcf7-textarea{
     @include media(smallXs) {
       width: 31.0rem;
     }
