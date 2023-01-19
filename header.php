@@ -28,8 +28,8 @@
 
                 <nav class="headernNav">
                     <ul class="headerNav__block">
-                        <li class="headerNav__items"><a href="#">Accueil</a></li>
-                        <li class="headerNav__items"><a href="#">Contact</a></li>
+                        <li class="headerNav__items"><a href="<?= home_url() ?>">Accueil</a></li>
+                        <li class="headerNav__items"><a href="#pricing">Nos offres</a></li>
                         <?php
 
                         $customMenu = wp_nav_menu([
@@ -50,8 +50,8 @@
                     </ul>
                 </nav>
                 <div class="header__btn">
-                    <a href="<?= get_site_url().'/wp-admin' ?>" class="btn btn-primary" title="Button pour allez sur la page profil">Se connecter</a>
-                    <a href="<?= get_site_url().'/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary" title="Button pour allez sur la page profil">S'abonner</a>
+                    <a href="<?= get_site_url() . '/wp-admin' ?>" class="btn btn-primary" title="Button pour allez sur la page profil">Se connecter</a>
+                    <a href="<?= get_site_url() . '/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary" title="Button pour allez sur la page profil">S'abonner</a>
                 </div>
 
             </div>

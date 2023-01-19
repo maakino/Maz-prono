@@ -41,4 +41,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('capture_subscription');
     wp_register_script('testimonial',  get_template_directory_uri() . '/assets/js/testimonial.js', [], false, true);
     wp_enqueue_script('testimonial');
+    wp_register_script('captureNiveauxDadhesion',  get_template_directory_uri() . '/assets/js/captureNiveauxDadhesion.js', [], false, true);
+    wp_enqueue_script('captureNiveauxDadhesion');
 });
+
+/* captureNiveauxDadhesion. */

@@ -46,7 +46,7 @@ get_header();
                 <h2 class="title title-medium"> Nos offres</h2>
                 <p class="txt">Voici les dernières offres que nous proposons </p>
             </span>
-            <div class="pricingGallery">
+            <div id="pricing" class="pricingGallery">
                 <div class="card">
                     <h2 class="title title-medium">VIP</h2>
                     <h2 class="title title-medium">1 mois</h2>

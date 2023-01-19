@@ -1,50 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const curentPage = wp_curentUrl.split('/').pop();
+    const curentPage=wp_curentUrl.split('/').pop();
 
-    if (curentPage === 'paiement-dadhesion') {
+    if (curentPage==='paiement-dadhesion') {
 
-        let form = document.querySelector("#pmpro_form")
-        let newForm = ""
+        let form=document.querySelector("#pmpro_form")
+
+
+        const inputLevel=document.querySelector("#level")
+        const inputCheckJavascript=document.querySelector("#checkjavascript");
+        const divPmPro_message=document.querySelector("#pmpro_message");
+        const formuleAdhesion=document.querySelector("#pmpro_pricing_fields");
+        const pmpro_account_loggedin=document.querySelector("#pmpro_account_loggedin");
+
+        let newForm=""
         if (form) {
 
-            newForm = `
+            newForm=`
             <div class="paiement_info" id="info_block">
-    <input type="hidden" id="level" name="level" value="2">
-    <input type="hidden" id="checkjavascript" name="checkjavascript" value="1">
-    <div id="pmpro_message" class="pmpro_message" style="display: none;"></div>
-    <h3>
-        <span class="pmpro_checkout-h3-name">Niveau d’adhésion</span>
-        <span class="pmpro_checkout-h3-msg"><a href="${wp_curentUrl}">Changer d'offres</a></span>
-    </h3>
-    <div class="pmpro_checkout-fields">
-        <p class="pmpro_level_name_text">
-            Vous avez sélectionné l’adhésion <strong>vip</strong>. </p>
-
-
-        <div id="pmpro_level_cost">
-
-            <div class="pmpro_level_cost_text">
-                <p>Le tarif est de <strong>25.00€ par Mois</strong>. </p>
-            </div>
-
-            <div class="pmpro_level_expiration_text">
-                <p>L’adhésion expire après 31 Mois.</p>
-            </div>
-        </div> <!-- end #pmpro_level_cost -->
-
-
-        <p id="other_discount_code_p" class="pmpro_small">Avez-vous un code de réduction ? <a id="other_discount_code_a" href="javascript:void(0);">  Cliquez ici pour entrer votre code de réduction</a>.</p>
-
-        <div id="other_discount_code_tr" style="display: none;">
-            <label for="other_discount_code">Code de remise</label>
-            <input id="other_discount_code" name="other_discount_code" type="text" class="input pmpro_alter_price" size="20" value="">
-            <input type="button" name="other_discount_code_button" id="other_discount_code_button" value="Appliquer">
-        </div>
-    </div>
-
-    <div id="pmpro_account_loggedin" class="pmpro_message pmpro_alert">
-        Vous êtes connecté en tant que <strong>admin </strong>. Si vous souhaitez utiliser un compte différent pour cette adhésion, <a href="${wp_siteUrl}/wp-login.php?action=logout&amp;redirect_to=%2Fpronos%2Fcompte-dadherent%2Fpaiement-dadhesion%2F&amp;_wpnonce=d7c7261ed8">déconnectez-vous maintenant</a>. </div>
+            ${inputLevel.outerHTML}
+            ${inputCheckJavascript.outerHTML}
+            ${divPmPro_message.outerHTML}
+            ${formuleAdhesion.outerHTML}
 </div>
 
 <!-- Champs adresse -->
@@ -436,55 +413,56 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 </div>
             ` };
-        form.innerHTML = newForm;
+        form.innerHTML=newForm;
 
 
 
-        const info_block = document.getElementById('info_block');
-        const adresse_block = document.getElementById('adresse_block');
-        const paiement_block = document.getElementById('paiement_block');
-        adresse_block.style.display = 'none';
-        paiement_block.style.display = 'none';
+        const info_block=document.getElementById('info_block');
+        const adresse_block=document.getElementById('adresse_block');
+        const paiement_block=document.getElementById('paiement_block');
 
-        const btnNext = document.createElement("button");
-        const btnPrevious = document.createElement("button");
-        const div = document.createElement("div");
-        let curentForm = "info_block";
+        adresse_block.style.display='none';
+        paiement_block.style.display='none';
 
-        div.className= 'paiement_info-btn';
+        const btnNext=document.createElement("button");
+        const btnPrevious=document.createElement("button");
+        const div=document.createElement("div");
+        let curentForm="info_block";
 
-        btnNext.innerText = "Suivant";
-        btnPrevious.innerText = "Précédent";
+        div.className='paiement_info-btn';
+
+        btnNext.innerText="Suivant";
+        btnPrevious.innerText="Précédent";
 
 
-        btnNext.attributes.type = "button";
-        btnPrevious.attributes.type = "button";
-        btnNext.className = 'btn';
-        btnPrevious.className = 'btn';
+        btnNext.attributes.type="button";
+        btnPrevious.attributes.type="button";
+        btnNext.className='btn';
+        btnPrevious.className='btn';
         btnNext.addEventListener('click', () => {
 
-            if (curentForm == "info_block") {
-                info_block.style.display = 'none';
-                adresse_block.style.display = 'block';
-                curentForm = "adresse_block";
-            } else if (curentForm == "adresse_block") {
-                adresse_block.style.display = 'none';
-                paiement_block.style.display = 'block';
-                curentForm = "paiement_block";
+            if (curentForm=="info_block") {
+                info_block.style.display='none';
+                adresse_block.style.display='block';
+                curentForm="adresse_block";
+            } else if (curentForm=="adresse_block") {
+                adresse_block.style.display='none';
+                paiement_block.style.display='block';
+                curentForm="paiement_block";
             }
 
         });
 
         btnPrevious.addEventListener('click', () => {
 
-            if (curentForm == "paiement_block") {
-                paiement_block.style.display = 'none';
-                adresse_block.style.display = 'block';
-                curentForm = "adresse_block";
-            } else if (curentForm == "adresse_block") {
-                adresse_block.style.display = 'none';
-                info_block.style.display = 'block';
-                curentForm = "info_block";
+            if (curentForm=="paiement_block") {
+                paiement_block.style.display='none';
+                adresse_block.style.display='block';
+                curentForm="adresse_block";
+            } else if (curentForm=="adresse_block") {
+                adresse_block.style.display='none';
+                info_block.style.display='block';
+                curentForm="info_block";
             }
         });
         div.appendChild(btnPrevious);

@@ -10,4 +10,8 @@
   --links-bkg-txt-color: #f9c653;
   --border-primary-radius: 0.9rem;
   --box--shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.10);
+  scroll-behavior: smooth;
+}
+html{
+  scroll-padding-top: 300px;
 }
