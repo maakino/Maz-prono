@@ -8,15 +8,16 @@ form {
     width: 46.4rem;
     margin: auto;
   }
-/* Input texte */
-  .pmpro_member_profile_edit-fields input, .input, .wpcf7-textarea, .wpcf7-form-control {
-   @include media(smallXs) {
-      width: 31.0rem;
-    }
 
+  .input,
+  .wpcf7-textarea,
+  .wpcf7-form-control {
+    @include media(smallXs) {
+      width: 31rem;
+    }
     max-width: none !important;
     width: 34.6rem;
-    padding: 1.2rem 0 ;
+    padding: 1.2rem 0;
     background-color: var(--bkg-tertiary-color);
     color: var(--links-secondary-color);
     box-shadow: var(--box--shadow);
@@ -33,6 +34,7 @@ form {
       outline-color: var(--links-bkg-txt-color);
     }
   }
+
   label {
     font-family: "Poppins";
     font-weight: 500 !important;
@@ -40,6 +42,7 @@ form {
     color: var(--bkg-tertiary-color);
     margin-bottom: 0.3rem !important;
   }
+
   .login-remember {
     label {
       display: flex !important;
@@ -55,10 +58,8 @@ form {
       }
     }
   }
-  .pmpro_btn{
-    width: auto !important;
-  }
-  input[type="submit"]{
+
+  input[type="submit"] {
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
     padding: 14px 23px;
     min-width: 13.2rem;
@@ -84,26 +85,7 @@ form {
       color: var(--links-bkg-txt-color) !important;
     }
   }
-  .pmpro_submit {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 1.4rem !important;
-  }
-}
-.pmpro_actions_nav {
-  a {
-    color: var(--bkg-tertiary-color);
-    font-family: "Montserrat";
-    font-size: 1.6rem;
-    transition: all 0.2s;
 
-    &:hover {
-      color: var(--links-bkg-txt-color);
-      transition: all 0.2s;
-    }
-  }
 }
 .lite {
   color: var(--bkg-tertiary-color) !important;
