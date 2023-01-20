@@ -50,8 +50,16 @@
                     </ul>
                 </nav>
                 <div class="header__btn">
-                    <a href="<?= get_site_url() . '/wp-admin' ?>" class="btn btn-primary" title="Button pour allez sur la page profil">Se connecter</a>
-                    <a href="<?= get_site_url() . '/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary" title="Button pour allez sur la page profil">S'abonner</a>
+                    <?php if (!wp_get_current_user()) : ?>
+
+                        <a href="<?= get_site_url() . '/wp-admin' ?>" class="btn btn-primary">Se connecter</a>
+                        <a href="<?= get_site_url() . '/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary">S'abonner</a>
+
+                    <?php else : ?>
+                        <a href="<?= get_site_url() . '/compte-dadherent' ?>" class="btn btn-primary">Profil</a>
+                        <a href="<?= get_site_url() . '/wp-login.php?action=logout'  ?>" class="btn btn-secondary">Déconnectons</a>
+
+                    <?php endif; ?>
                 </div>
 
             </div>

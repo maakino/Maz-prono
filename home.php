@@ -13,7 +13,7 @@ get_header();
     <section class="home">
         <div class="max-w homeContent paddingSection">
             <h1 class="title title-big">MAZ PRONOS</h1>
-            <p class="txt">Lorem ipsum dolor sit amet consectetur. Sollicitudin malesuada libero non pellentesque convallis arcu non.</p>
+            <p class="txt">Bienvenue sur Maz Pronos, votre site de pronostics sportifs ! Nous vous offrons les meilleurs pronostics pour le Tennis, le Football et le Basket.</p>
             <a href="#pricing" class="btn btn-primary">Voir les offres</a>
         </div>
     </section>
@@ -89,7 +89,7 @@ get_header();
 
     <section class="testimonial">
         <div class="maw-w paddingSection testimonialContent">
-        <?php echo do_shortcode('[sp_testimonial id="39"]');?>
+            <?php echo do_shortcode('[sp_testimonial id="39"]'); ?>
         </div>
     </section>
 

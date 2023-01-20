@@ -9,8 +9,7 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-//page
-@import 'page/page';
+
 
 //section
 @import 'section/home';
@@ -28,6 +27,7 @@
 
 //page
 @import 'page/contact';
+@import 'page/wp-page';
 
 
 //component
@@ -40,6 +40,7 @@
 @import 'component/wp-profil';
 @import 'component/wp-accontVip';
 @import 'component/wp-table';
+@import 'component/wp-adminbar.scss';
 
 //classUtils
 @import 'class-utils/max-w';
@@ -48,6 +49,8 @@
 @import 'class-utils/title';
 @import 'class-utils/txt';
 @import 'class-utils/titleSubs';
+@import 'class-utils/noMargin';
+@import 'class-utils/wp-classe';
 
 
 

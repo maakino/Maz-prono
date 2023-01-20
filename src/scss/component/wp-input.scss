@@ -8,14 +8,15 @@ form {
     width: 46.4rem;
     margin: auto;
   }
-  input, .wpcf7-textarea{
-    @include media(smallXs) {
+/* Input texte */
+  .pmpro_member_profile_edit-fields input, .wpcf7-textarea{
+   @include media(smallXs) {
       width: 31.0rem;
     }
     width: 100% !important;
     max-width: none !important;
     width: 34.6rem;
-    padding: 1.2rem 0;
+    padding: 1.2rem 0 ;
     background-color: var(--bkg-tertiary-color);
     color: var(--links-secondary-color);
     box-shadow: var(--box--shadow);
@@ -26,7 +27,7 @@ form {
     font-size: 1.8rem;
     font-family: "Montserrat";
     @include media(small) {
-      min-width: 46.4rem;
+      width: 46.4rem;
     }
     &:focus {
       outline-color: var(--links-bkg-txt-color);
@@ -54,7 +55,10 @@ form {
       }
     }
   }
-  input[type="submit"] {
+  .pmpro_btn{
+    width: auto !important;
+  }
+  input[type="submit"]{
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
     padding: 14px 23px;
     min-width: 13.2rem;

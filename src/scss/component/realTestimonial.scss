@@ -1,5 +1,3 @@
-
-
 .sp-testimonial-free {
     margin: auto;
     @include media(small){
@@ -8,16 +6,12 @@
         max-width: 800px;
     }
   }
-  h4,
-  h3,
-  .sp-testimonial-client-designation {
+  .sp-testimonial-client-designation, .sp-testimonial-post-title, .sp-testimonial-client-name {
     color: var(--txt-primary-color) !important;
   }
-  h4,
-  h3 {
-    font-family: "Poppins" !important;
-  }
-  p, .sp-testimonial-client-designation {
+
+
+  .sp-testimonial-client-designation {
     font-family: "Montserrat" !important;
     font-weight: 400 !important;
     font-size: 1.8rem !important;

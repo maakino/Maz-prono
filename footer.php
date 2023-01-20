@@ -16,32 +16,32 @@
                     <li>
                         <a class="footer__links links" href="#">VIP</a>
                     </li>
+                    <?php
+
+                    $customMenu = wp_nav_menu([
+                        'theme_location' => "header-menu",
+                        'menu' => 0,
+                        'container' => 'ul',
+                        'fallback_cb' => false,
+                    ]);
+
+                    /* get li in menu */
+                    $li = explode('</li>', $customMenu);
+                    /* echo li */
+                    foreach ($li as $value) {
+                        echo $value . '</li>';
+                    }
+
+                    ?>
                     <li>
-                        <a class="footer__links links" href="<?= home_url().'/contact' ?>">Contact</a>
+                        <a class="footer__links links" href="<?= home_url().'/mentions-legales' ?>">Mentions légales</a>
                     </li>
                     <li>
-                        <a class="footer__links links" href="#">Mentions légales</a>
-                    </li>
-                    <li>
-                        <a class="footer__links links" href="#">Condition générales de ventes</a>
+                        <a class="footer__links links" href="<?= home_url().'/conditions-generales-de-ventes' ?>">Condition générales de ventes</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footerContent__block">
-                <h2 class="footer__title">Les sports</h2>
-                <ul>
-                    <li>
-                        <a class="footer__links links" href="#">Football</a>
-                    </li>
-                    <li>
-                        <a  class="footer__links links"href="#">Tennis</a>
-                    </li>
-                    <li>
-                        <a  class="footer__links links"href="#">NBA</a>
-                    </li>
-                </ul>
-            </div>
             <div class="footerContent__block">
                 <h2 class="footer__title">Réseaux sociaux</h2>
                 <div class="footerSocial">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="footerContent__block">
-                <h2 class="footer__title">Paiement accéptées</h2>
+                <h2 class="footer__title">Paiement acceptées</h2>
                 <div class="footerSocial">
                     <img src="<?= get_template_directory_uri() . "/assets/img/icons/stripe.svg" ?>" alt="Logo Stripe" width="50" height="50" loading="lazy">
                     <img src="<?= get_template_directory_uri() . "/assets/img/icons/visa.svg" ?>" alt="Logo Visa" width="50" height="50" loading="lazy">
@@ -66,8 +66,9 @@
             </div>
         </div>
         <p class="footerCopy ">
-            LES JEUX D’ARGENT ET DE HASARD SONT INTERDITS AUX MINEURS. Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 
-            <a class="links" href="tel:09-74-75-13-13"> 09-74-75-13-13</a> ( appel non surtaxé )</p>
+            LES JEUX D’ARGENT ET DE HASARD SONT INTERDITS AUX MINEURS. Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le
+            <a class="links" href="tel:09-74-75-13-13"> 09-74-75-13-13</a> ( appel non surtaxé )
+        </p>
 
         <p class="footerCopy"> © Copyright Maz Pronos 2023 </p>
 
