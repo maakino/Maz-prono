@@ -9,11 +9,11 @@ form {
     margin: auto;
   }
 /* Input texte */
-  .pmpro_member_profile_edit-fields input, .wpcf7-textarea{
+  .pmpro_member_profile_edit-fields input, .input, .wpcf7-textarea, .wpcf7-form-control {
    @include media(smallXs) {
       width: 31.0rem;
     }
-    width: 100% !important;
+
     max-width: none !important;
     width: 34.6rem;
     padding: 1.2rem 0 ;
