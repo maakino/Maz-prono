@@ -10,10 +10,7 @@ get_header();
 </header><!-- .page-header -->
 
 <div class="error-404 not-found default-max-width">
-    <div class="page-content">
-        <p>Votre texte ici</p>
-        <?php get_search_form(); ?>
-    </div><!-- .page-content -->
+    <!-- .page-content -->
 </div><!-- .error-404 -->
 
 <?php

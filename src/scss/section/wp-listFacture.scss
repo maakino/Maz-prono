@@ -9,34 +9,7 @@ font-family: "Montserrat";
     overflow-x: initial;
     padding: 0;
   }
-  table {
-    max-height: 500px;
-    min-width: 500px;
-    margin-top: 1.4rem;
-    thead {
-      font-family: "Poppins";
-      font-weight: 600;
-    }
-    tbody {
-      margin-bottom: 1px solid var(--bkg-tertiary-color);
-      a {
-        text-decoration: underline;
-        color: var(--bkg-tertiary-color);
-        &:hover {
-          color: var(--links-bkg-txt-color);
-        }
-      }
-      tr {
-      }
-      td {
-        min-width: 200px;
-        text-align: center;
-        font-family: "Montserrat";
-        padding: 1.5rem;
-      }
-    }
-  }
-}
+
 .pmpro_actions_nav{
     position: sticky;
     top: 0;

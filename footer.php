@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="max-w paddingHeader">
         <div class="footerContent">
-            <a href="#accueil">
+            <a href="<?= home_url() ?>">
                 <img src="<?= get_template_directory_uri() . "/assets/img/logo.png" ?>" alt="Logo Maz prono qui renvoie en haut de la page d'accueil" width="129" height="129" loading="lazy">
             </a>
             <div class="footerContent__block">
@@ -65,9 +65,12 @@
                 </div>
             </div>
         </div>
-        <p class="footerCopy"> © Copyright Maz Pronos 2023 </p>
         <p class="footerCopy ">
-            LES JEUX D’ARGENT ET DE HASARD SONT INTERDITS AUX MINEURS. Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 09-74-75-13-13 (appel non surtaxé)</p>
+            LES JEUX D’ARGENT ET DE HASARD SONT INTERDITS AUX MINEURS. Jouer comporte des risques : endettement, isolement, dépendance. Pour être aidé, appelez le 
+            <a class="links" href="tel:09-74-75-13-13"> 09-74-75-13-13</a> ( appel non surtaxé )</p>
+
+        <p class="footerCopy"> © Copyright Maz Pronos 2023 </p>
+
     </div>
 </footer>
 </body>

@@ -7,3 +7,8 @@ width: 100%;
 min-height: calc(100vh - 11.2rem);
 background-color: var(--bkg-primary-color);
 }
+.login-remember{
+    input{
+       width: initial !important;
+    }
+}
