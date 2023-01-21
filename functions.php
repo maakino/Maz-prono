@@ -37,14 +37,21 @@ add_action('wp_enqueue_scripts', function () {
     /* Scripts */
     wp_register_script('appJs',  get_template_directory_uri() . '/assets/js/script.js', [], false, true);
     wp_enqueue_script('appJs');
+
     wp_register_script('capture_subscription',  get_template_directory_uri() . '/assets/js/captureSubscription.js', [], false, true);
     wp_enqueue_script('capture_subscription');
+
     wp_register_script('testimonial',  get_template_directory_uri() . '/assets/js/testimonial.js', [], false, true);
     wp_enqueue_script('testimonial');
+
     wp_register_script('captureNiveauxDadhesion',  get_template_directory_uri() . '/assets/js/captureNiveauxDadhesion.js', [], false, true);
     wp_enqueue_script('captureNiveauxDadhesion');
+
     wp_register_script('captureContact',  get_template_directory_uri() . '/assets/js/captureContact.js', [], false, true);
     wp_enqueue_script('captureContact');
+
+    wp_register_script('captureFacture',  get_template_directory_uri() . '/assets/js/captureFacture.js', [], false, true);
+    wp_enqueue_script('captureFacture');
 });
 
-/* captureContact */
+/* captureFacture */
