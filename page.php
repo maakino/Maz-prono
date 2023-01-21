@@ -17,6 +17,7 @@ while (have_posts()) :
 
             <div>
                 <?php the_content() ?>
+
             </div>
 
         </article><!-- #post-<?php the_ID(); ?> -->

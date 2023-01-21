@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (curentPage==='contact') {
 
         const article=document.querySelector('article');
-        const form=document.getElementById('wpcf7-f41-p43-o1')
+        const form=document.getElementById('wpcf7-f41-p42-o1')
         article.innerHTML="";
 
         const section=` <section class="contact">

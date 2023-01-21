@@ -10,11 +10,7 @@
                     <li>
                         <a class="footer__links links" href="<?= home_url() ?>">Accueil</a>
                     </li>
-                    <li>
-                        <a class="footer__links links" href="#pricing">Nos offres</a>
-                    </li>
-                    <li>
-                        <a class="footer__links links" href="#">VIP</a>
+                    <li class="footer__links links"><a href="<?= is_home() ? '#pricing' : home_url() . '#pricing'   ?>">Nos offres</a>
                     </li>
                     <?php
 

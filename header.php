@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript">
         const wp_curentUrl = '<?= home_url($wp->request); ?>';
-        const wp_siteUrl = '<?= get_template_directory_uri() ?>'
+        const wp_siteUrl = '<?= get_template_directory_uri() ?>';
+        const is_home = '<?= is_home() ?>';
     </script>
     <?= wp_head() ?>
     <title><?= get_bloginfo('name') ?></title>
 </head>
+
 
 <body>
 
@@ -29,7 +31,7 @@
                 <nav class="headernNav">
                     <ul class="headerNav__block">
                         <li class="headerNav__items"><a href="<?= home_url() ?>">Accueil</a></li>
-                        <li class="headerNav__items"><a href="#pricing">Nos offres</a></li>
+                        <li class="headerNav__items"><a href="<?= is_home() ? '#pricing' : home_url() . '#pricing'   ?>">Nos offres</a></li>
                         <?php
 
                         $customMenu = wp_nav_menu([
@@ -50,7 +52,8 @@
                     </ul>
                 </nav>
                 <div class="header__btn">
-                    <?php if (!wp_get_current_user()) : ?>
+
+                    <?php if (!wp_get_current_user()->user_login) : ?>
 
                         <a href="<?= get_site_url() . '/wp-admin' ?>" class="btn btn-primary">Se connecter</a>
                         <a href="<?= get_site_url() . '/compte-dadherent/paiement-dadhesion/' ?>" class="btn btn-secondary">S'abonner</a>
