@@ -34,28 +34,14 @@
 
                     ?>
                     <li>
-                        <a class="footer__links links" href="#">Mentions légales</a>
+                        <a class="footer__links links" href="<?= home_url() . '/mentions-legales' ?>">Mentions légales</a>
                     </li>
                     <li>
-                        <a class="footer__links links" href="#">Condition générales de ventes</a>
+                        <a class="footer__links links" href="<?= home_url() . '/conditions-generales-de-ventes' ?>">Condition générales de ventes</a>
                     </li>
                 </ul>
             </div>
 
-            <div class="footerContent__block">
-                <h2 class="footer__title">Les sports</h2>
-                <ul>
-                    <li>
-                        <a class="footer__links links" href="#">Football</a>
-                    </li>
-                    <li>
-                        <a class="footer__links links" href="#">Tennis</a>
-                    </li>
-                    <li>
-                        <a class="footer__links links" href="#">NBA</a>
-                    </li>
-                </ul>
-            </div>
             <div class="footerContent__block">
                 <h2 class="footer__title">Réseaux sociaux</h2>
                 <div class="footerSocial">
