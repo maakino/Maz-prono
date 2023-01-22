@@ -42,11 +42,11 @@
                 <h2 class="footer__title">Réseaux sociaux</h2>
                 <div class="footerSocial">
                     <!-- facebook -->
-                    <a href="#" class="links">
+                    <a id="url_facebook" href="<?= get_theme_mod('url_facebook') ?>" target="_blank" class="links">
                         <img class="footerSocial-hover" src="<?= get_template_directory_uri() . "/assets/img/icons/facebook.svg" ?>" alt="Icone qui redirige vers la page facebook" width="38" height="38" loading="lazy">
                     </a>
                     <!-- Telegram -->
-                    <a href="#" class="links">
+                    <a id="url_telegram" href="<?= get_theme_mod('url_telegram') ?>" target="_blank" class="links">
                         <img class="footerSocial-hover" src="<?= get_template_directory_uri() . "/assets/img/icons/telegram.svg" ?>" alt="Icone qui redirige vers lapplication télégram " width="38" height="38" loading="lazy">
                     </a>
                 </div>

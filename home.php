@@ -12,7 +12,7 @@ get_header();
 
     <section class="home">
         <div class="max-w homeContent paddingSection">
-            <h1 class="title title-big">MAZ PRONOS</h1>
+            <h1 id="title_hero_home" class="title title-big"><?= get_theme_mod('title_hero_home') ? get_theme_mod('title_hero_home') : 'MAZ PRONOS' ?> </h1>
             <p class="txt">Bienvenue sur Maz Pronos, votre site de pronostics sportifs ! Nous vous offrons les meilleurs pronostics pour le Tennis, le Football et le Basket.</p>
             <a href="#pricing" class="btn btn-primary">Voir les offres</a>
         </div>
@@ -31,14 +31,18 @@ get_header();
             </div>
         </div>
     </section>
+    <?php if (get_theme_mod('value_code_promo') !== "") : ?>
+        <section class="promoCode">
+            <div class="max-w">
+                <h2 class="title title-medium">
+                    Bénéficier de
+                    <span id="value_pourcent"><?= get_theme_mod('value_pourcent') ? get_theme_mod('value_pourcent') : '20' ?></span>% de remise avec le code
+                    <span id="value_code_promo"><?= get_theme_mod('value_code_promo') ? get_theme_mod('value_code_promo') :  'Cow974' ?></span>
+                </h2>
+            </div>
+        </section>
+    <?php endif; ?>
 
-    <section class="promoCode">
-        <div class="max-w">
-            <h2 class="title title-medium">
-                Bénéficier de 20% de remise avec le code Cow974
-            </h2>
-        </div>
-    </section>
 
     <section class="pricing">
         <div class="max-w paddingSection pricingContent">

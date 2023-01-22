@@ -12,17 +12,25 @@ add_action('after_setup_theme', function () {
     /* Ajout du menu */
     add_theme_support('menus');
     register_nav_menu('header-menu', 'En tête du menu');
-    register_nav_menu('footer-menu', 'footer menu');
+    /* register_nav_menu('footer-menu', 'footer menu'); */
 
     /* Ajout d'une category personnaliser a l'activation du theme */
-    /* wp_insert_term(
-        'blog',
+    wp_insert_term(
+        'last_tips',
         'category',
         array(
-            'description' => 'blog',
-            'slug' => 'blog'
+            'description' => 'category a utiliser pour les images qui doivent être afficher sur la page d\'accueil',
+            'slug' => ' last_tips'
         )
-    ); */
+    );
+    wp_insert_term(
+        'vip_board',
+        'category',
+        array(
+            'description' => 'category a utiliser pour les images qui doivent être afficher sur la page Vip ',
+            'slug' => ' vip_board'
+        )
+    );
 });
 
 

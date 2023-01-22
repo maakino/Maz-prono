@@ -8,43 +8,37 @@
         });
     });
 
-    wp.customize('background_hero_home', (value) => {
+    /* CODE PROMO */
+    wp.customize('value_code_promo', (value) => {
         value.bind((newVal) => {
-            $('#background_hero_home').attr('src', newVal);
+            console.log(newVal);
+            $('#value_code_promo').text(newVal);
         });
     });
 
-    /* PRESENTATION */
-    wp.customize('text_presentation', (value) => {
+    wp.customize('value_pourcent', (value) => {
         value.bind((newVal) => {
-            $('#text_presentation').text(newVal);
+            $('#value_pourcent').text(newVal);
         });
     });
-    wp.customize('url_img_presentation', (value) => {
-        value.bind((newVal) => {
-            $('#url_img_presentation').attr('src', newVal);
-        });
-    });
+
+
 
     /* RESEAUX SOCIAUX */
 
     /* Reseaux  */
-    wp.customize('twitter-link', (value) => {
+    wp.customize('url_facebook', (value) => {
         value.bind((newVal) => {
-            $('#twitter-link').attr('href', newVal);
+            $('#url_facebook').attr('href', newVal);
         });
 
     });
 
-    wp.customize('instagram-link', (value) => {
+    wp.customize('url_telegram', (value) => {
         value.bind((newVal) => {
-            $('#instagram-link').attr('href', newVal);
+            $('#url_telegram').attr('href', newVal);
         });
     });
-    wp.customize('youtube-link', (value) => {
-        value.bind((newVal) => {
-            $('#youtube-link').attr('href', newVal);
-        });
-    });
+
 
 })(jQuery)
