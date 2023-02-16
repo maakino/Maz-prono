@@ -66,20 +66,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const card=`
                 <div class="card">
-                   
-                    <h2 class="title title-medium">${name}</h2>
+                    <div class="card__header"> 
+                        ${textLineThrough(name)}
+                    </div>
+                    <h3 class="title title-medium" style="color:#111111">${price}</h3>
+
+                <div class="card__content"> 
                     <p>ACCÈS VIP</p>
                     <p>PRONO DU JOUR</p>
                     <p>COMBINÉ</p>
                     <p>COMBINÉ BONUS</p>
                     <p>COMBINÉ BUTTEURS</p>
                     <p>Montante</p>
-                     <h3 class="title title-medium" style="color:#111111">${price}</h3>
-                    ${button}
+                </div>
+                ${button}
+
+                <div class="card__footer"> 
                     <small>${statusAdhesion}</small>
+                    </div>
                 </div>`
 
         return card;
+    }
+
+    function textLineThrough(text) {
+        const ArrayText=text.split("/");
+        if (ArrayText.length>1) {
+            return `  <h2 class="title title-medium">${ArrayText[0]}/<span class="line-through">${ArrayText[1]}</span></h2>`
+        }
+
+        return `<h2 class="title title-medium">${text}</h2>`;
+
+
+
     }
 });
 

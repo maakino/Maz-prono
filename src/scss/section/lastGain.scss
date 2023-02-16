@@ -15,4 +15,11 @@
             gap: 11.1rem;
         }
     }
+    .acfBlockContent{
+        flex-direction: column !important;
+        gap: 5.2rem;
+        @include media (medium){
+            flex-direction:  row !important;
+        }
+    }
 }

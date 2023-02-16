@@ -1,0 +1,58 @@
+.testimonial-form {
+  input, textarea {
+    max-width: none ;
+    background-color: var(--bkg-tertiary-color);
+    color: var(--links-secondary-color);
+    box-shadow: var(--box--shadow);
+    border: none;
+    display: inline-block;
+    border-radius: var(--border-primary-radius);
+    padding: 1.3rem 1.2rem;
+    font-size: 1.8rem;
+    font-family: "Montserrat";
+    @include media(small) {
+        width: 46.4rem;
+      }
+      &:focus {
+        outline-color: var(--links-bkg-txt-color);
+      }
+  }
+  #auth_name_1, #testimonial_1{
+    width: 100% !important;
+  }
+  textarea{
+    height: 15.0rem;
+  }
+  span {
+    font-family: "Montserrat";
+    color: var(--txt-primary-color);
+    font-size: 1.8rem;
+    text-shadow: none;
+    border-radius: 0;
+  }
+  .cpatchadiv{
+    border: none;
+  }
+  .submit{
+    box-shadow: 1.95px 1.95px 2.6px rgb(0 0 0 / 15%);
+    padding: 14px 23px;
+    min-width: 13.2rem;
+    cursor: pointer;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 1.6rem;
+    border-radius: var(--border-primary-radius);
+    -webkit-transition: all .6s;
+    transition: all .6s;
+    background-color: var(--links-primary-color);
+    color: var(--links-secondary-color);
+    border: none;
+  }
+  .success, .error{
+    font-family: "Montserrat" !important;
+    font-size: 1.4rem !important;
+    text-shadow: none !important;
+    text-shadow: none;
+  }
+}
+

@@ -4,6 +4,8 @@
 require_once('options/customize_theme.php');
 
 
+
+
 add_action('after_setup_theme', function () {
 
     add_theme_support('title-tag');
@@ -15,20 +17,29 @@ add_action('after_setup_theme', function () {
     /* register_nav_menu('footer-menu', 'footer menu'); */
 
     /* Ajout d'une category personnaliser a l'activation du theme */
+
     wp_insert_term(
-        'last_tips',
+        'Football',
         'category',
         array(
-            'description' => 'category a utiliser pour les images qui doivent être afficher sur la page d\'accueil',
-            'slug' => ' last_tips'
+            'description' => '',
+            'slug' => ' football'
         )
     );
     wp_insert_term(
-        'vip_board',
+        'Tennis',
         'category',
         array(
-            'description' => 'category a utiliser pour les images qui doivent être afficher sur la page Vip ',
-            'slug' => ' vip_board'
+            'description' => '',
+            'slug' => ' tennis'
+        )
+    );
+    wp_insert_term(
+        'NBA',
+        'category',
+        array(
+            'description' => '',
+            'slug' => ' nba'
         )
     );
 });
@@ -43,7 +54,13 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('styleCss');
 
     /* Scripts */
-    wp_register_script('appJs',  get_template_directory_uri() . '/assets/js/script.js', [], false, true);
+
+
+
+
+
+
+    wp_register_script('appJs',  get_template_directory_uri() . '/assets/js/script.js', [], false, false);
     wp_enqueue_script('appJs');
 
     wp_register_script('capture_subscription',  get_template_directory_uri() . '/assets/js/captureSubscription.js', [], false, true);
@@ -60,6 +77,42 @@ add_action('wp_enqueue_scripts', function () {
 
     wp_register_script('captureFacture',  get_template_directory_uri() . '/assets/js/captureFacture.js', [], false, true);
     wp_enqueue_script('captureFacture');
+
+    wp_register_script('headerBurger',  get_template_directory_uri() . '/assets/js/headerBurger.js', [], false, true);
+    wp_enqueue_script('headerBurger');
+
+
+    /* 
+    function add_defer_attribute($tag, $handle)
+    {
+        // ajouter les handles de mes scripts au array ci-dessous. Ici 3 scripts par exemple.
+        $scripts_to_defer = array('appJs', 'capture_subscription', 'testimonial', 'captureNiveauxDadhesion', 'captureContact', 'captureContact', 'headerBurger');
+        foreach ($scripts_to_defer as $defer_script) {
+            if (
+                $defer_script === $handle
+            ) {
+                return str_replace(' src', ' async="async" src', $tag);
+            }
+        }
+        return $tag;
+    }
+
+    add_filter('script_loader_tag', 'add_defer_attribute', 10, 2); */
+
+    function load_wp_media_files()
+    {
+        wp_enqueue_media();
+    }
+    add_action('admin_enqueue_scripts', 'load_wp_media_files');
+
+    function wpc_show_admin_bar()
+    {
+        if (!current_user_can('administrator') && !is_admin()) {
+            return false;
+        }
+        return true;
+    }
+    add_filter('show_admin_bar', 'wpc_show_admin_bar');
 });
 
 /* captureFacture */

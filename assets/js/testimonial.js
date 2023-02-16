@@ -1,30 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+    const allImg=[...document.querySelectorAll('.imgupdate-circle-img')];
 
-    let testimonial=[...document.querySelectorAll('.sp-testimonial-item')];
+    if (allImg) {
 
-    if (testimonial) {
-        testimonial.map((value, index) => {
+        allImg.map((value, index) => {
 
-            const divImg=value.querySelector('.sp-testimonial-client-image');
+            allImg[index].src=`${wp_siteUrl}/assets/img/icons/user.svg`;
+            allImg[index].setAttribute('width', '100px');
+            allImg[index].setAttribute('height', '100px');
 
-            if (!divImg) {
-
-                const div=document.createElement('div');
-                div.classList.add('sp-testimonial-client-image');
-                div.innerHTML=`<img width="120" height="75" src="${wp_siteUrl}/assets/img/icons/user.svg" class="tfree-client-image wp-post-image" alt="" loading="lazy">`;
-                value.insertBefore(div, value.firstChild);
-
-                testimonial[index]=value;
-            }
-
+            allImg[index].setAttribute('alt', "avatar générique utilisateur pour les témoignages");
 
         })
-
-
     }
 
 
-
-});;
+});

@@ -4,16 +4,17 @@ get_template_directory_uri()
 
 <?php
 get_header();
+
 ?>
 
 
 <!-- YOUR CODE HTML  -->
 <Main>
 
-    <section class="home">
+    <section id="background_image" class="home" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(<?= get_theme_mod('background_image') ?>);">
         <div class="max-w homeContent paddingSection">
             <h1 id="title_hero_home" class="title title-big"><?= get_theme_mod('title_hero_home') ? get_theme_mod('title_hero_home') : 'MAZ PRONOS' ?> </h1>
-            <p class="txt">Bienvenue sur Maz Pronos, votre site de pronostics sportifs ! Nous vous offrons les meilleurs pronostics pour le Tennis, le Football et le Basket.</p>
+            <p id="title_hero_message" class="txt"><?= get_theme_mod('title_hero_message', true) ?></p>
             <a href="#pricing" class="btn btn-primary">Voir les offres</a>
         </div>
     </section>
@@ -25,9 +26,7 @@ get_header();
                 <p class="txt">Voici mes derniers pronostiques </p>
             </span>
             <div class="lastGain__gallery">
-                <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
-                <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
-                <img src="<?= get_template_directory_uri() . "/assets/img/card/cardImg.jpg" ?>" alt="Apperçu du derniers gain" width="312" height="355" loading="lazy">
+                <?= do_shortcode('[gain_view]'); ?>
             </div>
         </div>
     </section>
@@ -51,15 +50,15 @@ get_header();
                 <p class="txt">Voici les dernières offres que nous proposons </p>
             </span>
             <div id="pricing" class="pricingGallery">
-
                 <?= do_shortcode('[pmpro_advanced_levels]'); ?>
             </div>
+            <p>Toutes nos offres sont sans engagement vous pouvez résilier à tout moment.</p>
         </div>
     </section>
 
     <section class="testimonial">
         <div class="maw-w paddingSection testimonialContent">
-            <?php echo do_shortcode('[sp_testimonial id="39"]'); ?>
+            <?php echo do_shortcode('[print_best_testimonial_slider]'); ?>
         </div>
     </section>
 

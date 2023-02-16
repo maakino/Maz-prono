@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (curentPage==='contact') {
 
         const article=document.querySelector('article');
-        const form=document.getElementById('wpcf7-f41-p42-o1')
+        const form=document.querySelector('.wpcf7-form')
+
         article.innerHTML="";
 
         const section=` <section class="contact">
@@ -18,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <span class="contactSocial">
 
-                    <a class="footerSocial-hover" href="https://www.facebook.com/mazprono/" target="_blank">
-                        <img src="${wp_siteUrl}/assets/img/icons/facebook.svg" alt="facebook">
+                    <a class="footerSocial-hover"href="${url_facebook}" target="_blank">
+                        <img src="${wp_siteUrl}/assets/img/icons/facebook.svg" alt="facebook" width="35" height="35" loading="lazy">
                     </a>
-                    <a class="footerSocial-hover" href="https://t.me/mazprono" target="_blank">
-                        <img src="${wp_siteUrl}/assets/img/icons/telegram.svg" alt="telegram">
+                    <a class="footerSocial-hover" href="${url_telegram}" target="_blank">
+                        <img src="${wp_siteUrl}/assets/img/icons/telegram.svg" alt="telegram" width="35" height="35" loading="lazy">
                     </a>
                 </span>
         </div>

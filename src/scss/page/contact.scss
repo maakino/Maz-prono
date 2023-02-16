@@ -37,11 +37,22 @@
     justify-content: center;
     gap: 1.9rem;
     img {
-      width: 6rem;
+      width: 3.5rem;
       height: auto;
     }
   }
   textarea {
     height: 150px;
   }
+  form{
+    p{
+      width: min-content !important;
+    }
+  }
+  .wpcf7-response-output{
+    font-size: 2rem;
+    border: var(--border-radius);
+    color: var(--links-primary-color);
+  }
 }
+

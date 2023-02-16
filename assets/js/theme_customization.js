@@ -7,6 +7,16 @@
             $('#title_hero_home').text(newVal);
         });
     });
+    wp.customize('title_hero_message', (value) => {
+        value.bind((newVal) => {
+            $('#title_hero_message').text(newVal);
+        });
+    });
+    wp.customize('background_image', (value) => {
+        value.bind((newVal) => {
+            $('#background_image').css('background-image', 'url('+newVal+')');
+        });
+    });
 
     /* CODE PROMO */
     wp.customize('value_code_promo', (value) => {
@@ -42,3 +52,5 @@
 
 
 })(jQuery)
+
+

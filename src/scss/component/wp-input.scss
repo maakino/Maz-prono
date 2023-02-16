@@ -3,20 +3,19 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4.2rem;
+ /*  gap: 4.2rem; */
   @include media(medium) {
     width: 46.4rem;
     margin: auto;
   }
-
   .input,
   .wpcf7-textarea,
   .wpcf7-form-control {
     @include media(smallXs) {
-      width: 31rem;
+      width: 31rem !important;
     }
     max-width: none !important;
-    width: 34.6rem;
+    width: 34.6rem !important;
     padding: 1.2rem 0;
     background-color: var(--bkg-tertiary-color);
     color: var(--links-secondary-color);
@@ -28,7 +27,7 @@ form {
     font-size: 1.8rem;
     font-family: "Montserrat";
     @include media(small) {
-      width: 46.4rem;
+      width: 46.4rem !important;
     }
     &:focus {
       outline-color: var(--links-bkg-txt-color);
@@ -41,6 +40,8 @@ form {
     font-size: 1.8rem;
     color: var(--bkg-tertiary-color);
     margin-bottom: 0.3rem !important;
+    width: 100%;
+    text-align: left;
   }
 
   .login-remember {
@@ -50,19 +51,36 @@ form {
       justify-content: flex-start !important;
       align-items: center !important;
       gap: 1.4rem;
+      @media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min--moz-device-pixel-ratio: 2),
+        only screen and (-o-min-device-pixel-ratio: 2/1),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and (min-resolution: 2dppx) {
+        gap: 0.5rem;
+      }
       input {
         min-width: inherit !important;
         font-size: 5rem !important;
-        transform: scale(1.5);
         cursor: pointer;
+        transform: scale(1.2);
+        @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+          transform: scale(0.5);
+        }
       }
     }
   }
 
   input[type="submit"] {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15);
-    padding: 14px 23px;
+    padding: 1.4rem 2.3rem !important;
     min-width: 13.2rem;
+    flex: 2;
+    max-width: 20rem !important;
     cursor: pointer;
     font-family: "Montserrat";
     font-weight: 800;
@@ -72,6 +90,9 @@ form {
     background-color: var(--links-primary-color);
     color: var(--links-secondary-color);
     border: none;
+    @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+      height: 5.0rem;
+    }
     &:hover {
       background-color: var(--links-secondary-color);
       color: var(--links-primary-color);
@@ -85,6 +106,14 @@ form {
       color: var(--links-bkg-txt-color) !important;
     }
   }
+
+  .pmpro_submit{
+    flex-direction: column !important;
+  }
+
+
+
+
 
 }
 .lite {

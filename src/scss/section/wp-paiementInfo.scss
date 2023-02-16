@@ -15,7 +15,7 @@
       font-family: "Poppins" !important;
       font-weight: 500 !important;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         color: var(--links-bkg-txt-color) !important;
       }
     }
@@ -39,9 +39,7 @@
     }
   }
 }
-.pmpro_checkout-h3-name {
-  display: none !important;
-}
+
 .adresse_block {
   display: flex;
   flex-direction: column;
@@ -81,22 +79,60 @@
   }
 }
 
-.pmpro_checkout-field-bconfirmemail,
-.pmpro_checkout-field-bcountry {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: fit-content !important;
-  @include media(medium) {
-    align-items: flex-start;
+.pmpro_checkout {
+  line-height: 1.8;
+ &-h3-name {
+    display: none !important;
   }
-}
-.pmpro_checkout-field-bcountry {
-  @include media(smallXs) {
-    width: 31rem;
+  &-h3-msg{
+    font-size: 1.7rem !important;
+    margin-bottom: 2rem !important;
+    display: block;
+    a{
+      color: var(--links-primary-color);
+      text-decoration: underline;
+      font-size: 1.7rem;
+    }
   }
-}
+  &-field {
+
+    &-bconfirmemail,
+    &-bcountry {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include media(medium) {
+        align-items: flex-start;
+      }
+    }
+
+    &-bcountry{
+      @include media(smallXs) {
+        width: 31rem;
+      }
+    }
+
+  }
+  .pmpro_small{
+    font-size: 1.8rem !important;
+    &:last-child{
+      color: red !important;
+    }
+    a{
+      color: var(--links-primary-color);
+      display: inline-block;
+      text-decoration: underline;
+    }
+  }
+  #other_discount_code_button{
+    font-size: 1.8rem !important;
+    margin: auto !important;
+    margin-top: 2rem !important;
+    width: fill;
+  }
+ 
+
 
 #paiement_block {
   display: flex;
@@ -150,14 +186,20 @@
   }
 }
 
-#paiement_block, #info_block, #adresse_block{
-animation: showPage 2s ;
+#paiement_block,
+#info_block,
+#adresse_block {
+  animation: showPage 2s;
 }
 @keyframes showPage {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.adresse_block {
+}
 }

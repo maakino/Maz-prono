@@ -1,33 +1,36 @@
 table {
-    font-size: 2rem;
-    min-width: 380px !important;
+  font-size: 2rem;
+  min-width: 293px !important;
 
-    @include media(small) {
-      font-size: 2.4rem;
+  @include media(small) {
+    font-size: 2.4rem;
+  }
+  thead {
+    font-family: "Poppins";
+    font-weight: 600;
+    th, tr{
+      padding-right: 15px;
     }
-    thead {
-      font-family: "Poppins";
-      font-weight: 600;
-    }
-    td {
-      width: 30rem !important;
+  }
+  td {
+    width: 30rem !important;
 
-      font-family: "Montserrat";
-      color: var(--txt-primary-color);
-      padding: 1rem !important;
-      @include media(large) {
-      }
+    font-family: "Montserrat";
+    color: var(--txt-primary-color);
+    padding: 1rem !important;
+    @include media(large) {
     }
-    tbody {
-      tr {
-        border-bottom: 1px solid var(--bkg-tertiary-color);
-        td {
-          line-height: 2;
-          text-align: center;
-          a {
-            color: var(--links-bkg-txt-color);
-          }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--bkg-tertiary-color);
+      td {
+        line-height: 2;
+        text-align: center;
+        a {
+          color: var(--links-bkg-txt-color);
         }
       }
     }
   }
+}

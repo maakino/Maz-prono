@@ -21,6 +21,35 @@ add_action('customize_register', function (WP_Customize_Manager $manager) {
         'type' => 'text',
 
     ]);
+    $manager->add_setting('title_hero_message', [
+        'default' => 'Bienvenue sur Maz Pronos, votre site de pronostics sportifs ! Nous vous offrons les meilleurs pronostics pour le Tennis, le Football et le Basket.',
+        'transport' => 'postMessage'
+    ]);
+
+    $manager->add_control('title_hero_message', [
+        'section' => 'hero-home',
+        'seting' => 'title_hero_message',
+        'label' => 'message pour le Hero Home de la page d\'accueil',
+        'type' => 'text',
+
+    ]);
+
+    /* add ooption change background image  */
+    $manager->add_setting('background_image', [
+        'default' => get_template_directory_uri() . '/assets/img/hero-home.jpg',
+        'transport' => 'postMessage'
+    ]);
+
+    $manager->add_control(new WP_Customize_Image_Control($manager, 'background_image', [
+        'label' => 'Image de fond',
+        'section' => 'hero-home',
+        'settings' => 'background_image',
+    ]));
+
+
+
+
+
     /* Define section */
 
     $manager->add_section('code_promo', [

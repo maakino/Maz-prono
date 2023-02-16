@@ -1,23 +1,16 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    const nav=document.querySelector("#nav");
-    const burger=document.querySelector("#burger");
+    const curentPage=wp_curentUrl.split('/').pop();
 
-    if (burger&&nav) {
-        burger.addEventListener("click", function () {
-            nav.classList.toggle("active");
-        });
-        nav.querySelectorAll("li").forEach(function (li) {
-            li.addEventListener("click", function () {
-                nav.classList.remove("active");
-            });
-        });
+
+    if (curentPage==='member') {
+        const testimonialImg=document.createElement('img');
+        const testimonialDiv=document.querySelector('#testimonialLinkContent');
+        testimonialImg.setAttribute('src', wp_siteUrl+'/assets/img/icons/comment-solid.svg');
+        testimonialImg.setAttribute('height', '20px')
+        testimonialDiv.querySelector('a').after(testimonialImg);
     }
 
 
 
-
-
-
-});;
+});

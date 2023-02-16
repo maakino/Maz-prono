@@ -52,9 +52,11 @@
     &:nth-child(2) {
       margin-bottom: 2.9rem;
       a{
-        color: var(--txt-primary-color);
+        color: var(--links-primary-color);
+        text-decoration: underline;
         &:hover{
-          color: var(--links-primary-color);
+        color: var(--txt-primary-color);
+
         }
       }
     }
@@ -67,6 +69,9 @@
     }
       @include media(large) {
         max-width: inherit;
+      }
+      span{
+        color: green;
       }
     }
   }

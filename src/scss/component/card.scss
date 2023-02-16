@@ -1,32 +1,78 @@
-.card{
-    @include media (smallXs){
-        width: 28.0rem;
+.card {
+    @include media(smallXs) {
+        width: 28rem;
     }
     margin-top: 2.9rem;
     background-color: var(--bkg-tertiary-color);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     gap: 1.8rem;
     box-shadow: var(--box--shadow);
     width: 34.6rem;
-    min-height: 46.6rem;
+    min-height: 67.2rem;
     border-radius: var(--border-primary-radius);
-    padding: 2.3rem 0;
-    @include media(small){
-    width: 38.6rem;
+    padding-bottom: 2.3rem;
+    @include media(small) {
+        width: 38.6rem;
     }
-    h2, h3{
+    &__header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--links-primary-color);
+        width: 100%;
+        min-height: 11.6rem;
+        padding: 1rem;
+        border-radius: var(--border-primary-radius);
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.8rem;
+        padding: 2.3rem;
+    }
+    h2,
+    h3 {
         color: var(--links-secondary-color);
         font-size: 3.2rem;
+        text-align: center;
     }
-    p{
+
+    p {
         margin: 0;
         font-family: "Montserrat";
         font-weight: 600;
         font-size: 1.6rem;
         color: var(--links-secondary-color);
+    }
 
+    &__footer {
+        padding: 2.6rem;
+        text-align: center;
+
+        small {
+            font-family: "Montserrat";
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+    .pmpro_btn.disabled,
+    .pmpro_btn[disabled],
+    fieldset[disabled] .pmpro_btn {
+        padding: 8px 23px !important;
+        min-width: 13.2rem !important;
+        font-family: "Montserrat" !important;
+        font-weight: 800;
+        font-size: 1.6rem;
+        border-radius: var(--border-primary-radius);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+            height: 5rem;
+        }
     }
 }
